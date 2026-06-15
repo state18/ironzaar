@@ -1,5 +1,10 @@
 'use strict';
 
+// Hide broken-image icons for missing placeholders
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('error', () => { img.style.opacity = '0'; });
+});
+
 const heroResult  = document.getElementById('heroResult');
 const heroLabel   = document.getElementById('heroLabel');
 const heroTime    = document.getElementById('heroTime');

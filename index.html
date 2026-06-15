@@ -39,24 +39,28 @@
         <div class="card-grid">
 
           <div class="card">
+            <img class="card-img" src="images/roll-1-2.png" alt="Roll 1–2" />
             <div class="card-title">Options (1–2)</div>
             <div class="card-desc">Two-option decisions</div>
             <button onclick="roll('Options', 1, 2)">Roll 1–2</button>
           </div>
 
           <div class="card">
+            <img class="card-img" src="images/roll-1-3.png" alt="Roll 1–3" />
             <div class="card-title">Options (1–3)</div>
             <div class="card-desc">Three-option decisions (most common)</div>
             <button onclick="roll('Options', 1, 3)">Roll 1–3</button>
           </div>
 
           <div class="card">
+            <img class="card-img" src="images/roll-1-4.png" alt="Roll 1–4" />
             <div class="card-title">Options (1–4)</div>
             <div class="card-desc">Four-option decisions</div>
             <button onclick="roll('Options', 1, 4)">Roll 1–4</button>
           </div>
 
           <div class="card">
+            <img class="card-img" src="images/roll-custom.png" alt="Custom Roll" />
             <div class="card-title">Custom Range</div>
             <div class="card-desc">Any edge case</div>
             <div class="custom-range">
@@ -76,18 +80,21 @@
         <div class="card-grid">
 
           <div class="card">
+            <img class="card-img" src="images/aerodrome.png" alt="Aerodrome" />
             <div class="card-title">Aerodrome</div>
             <div class="card-desc">1 = Reroll node&nbsp;&nbsp;2 = Select location</div>
             <button onclick="rollAerodrome()">Roll Aerodrome</button>
           </div>
 
           <div class="card">
+            <img class="card-img" src="images/lickit.png" alt="Lickit" />
             <div class="card-title">Lickit</div>
             <div class="card-desc">Treats vs. Creations, then which creation</div>
             <button onclick="rollLickit()">Roll Lickit</button>
           </div>
 
           <div class="card">
+            <img class="card-img" src="images/gumball.png" alt="Gumball Machine" />
             <div class="card-title">Gumball Machine</div>
             <div class="card-desc">How many gumballs to buy (0–10)</div>
             <button onclick="rollGumball()">Roll Gumball</button>
@@ -101,23 +108,65 @@
         <h2>Kaizo Mode <span class="kaizo-badge">KAIZO</span></h2>
 
         <div class="card-grid">
-
           <div class="card kaizo-card">
+            <img class="card-img" src="images/kaizo-dig-site.png" alt="Pearl's Dig Site" />
             <div class="card-title">Pearl's Dig Site</div>
             <div class="card-desc">Roll 1–5 for number of digs before selecting item</div>
             <button onclick="roll('Pearl\'s Dig Site – Digs', 1, 5)">Roll 1–5</button>
           </div>
-
         </div>
 
         <h3 class="rule-reminders-title">Passive Rule Reminders</h3>
         <div class="rule-reminders">
-          <div class="rule-badge">Tumbleweeds: rightmost slot must stay empty during combat</div>
-          <div class="rule-badge">Steady Hand: no moving items on board or stash inside a node or before rolling</div>
-          <div class="rule-badge">Mandala's Malice: if Mandala is rolled, board is frozen until it ends</div>
-          <div class="rule-badge">Highest-Rarity Tax: sell one item of your highest rarity at the start of each day (from day 3)</div>
-          <div class="rule-badge">No Repairs: destroyed items must be sold immediately after combat</div>
-          <div class="rule-badge">Take ONE Please: buy only 1 item per batch shown at a shop</div>
+
+          <div class="rule-card">
+            <img class="rule-img" src="images/kaizo-tumbleweeds.png" alt="Tumbleweeds" />
+            <div class="rule-info">
+              <div class="rule-name">Tumbleweeds</div>
+              <div class="rule-desc">The rightmost slot on your board must be empty during all combats.</div>
+            </div>
+          </div>
+
+          <div class="rule-card">
+            <img class="rule-img" src="images/kaizo-steady-hand.png" alt="Steady Hand" />
+            <div class="rule-info">
+              <div class="rule-name">Steady Hand</div>
+              <div class="rule-desc">You may not move existing items on your board or stash when inside a node or before rolling to choose a node.</div>
+            </div>
+          </div>
+
+          <div class="rule-card">
+            <img class="rule-img" src="images/kaizo-mandala.png" alt="Mandala's Malice" />
+            <div class="rule-info">
+              <div class="rule-name">Mandala's Malice</div>
+              <div class="rule-desc">If the Mandala event is rolled, you may not change your board until it is over.</div>
+            </div>
+          </div>
+
+          <div class="rule-card">
+            <img class="rule-img" src="images/kaizo-highest-rarity.png" alt="Highest-Rarity Tax" />
+            <div class="rule-info">
+              <div class="rule-name">Highest-Rarity Tax</div>
+              <div class="rule-desc">Starting from day 3, at the start of each day you must sell one item of your highest rarity.</div>
+            </div>
+          </div>
+
+          <div class="rule-card">
+            <img class="rule-img" src="images/kaizo-no-repairs.png" alt="No Repairs" />
+            <div class="rule-info">
+              <div class="rule-name">No Repairs</div>
+              <div class="rule-desc">Items that are destroyed during combat must be sold immediately after combat.</div>
+            </div>
+          </div>
+
+          <div class="rule-card">
+            <img class="rule-img" src="images/kaizo-take-one.png" alt="Take ONE Please" />
+            <div class="rule-info">
+              <div class="rule-name">Take ONE Please!</div>
+              <div class="rule-desc">You may only buy 1 item per each batch of items shown at a shop.</div>
+            </div>
+          </div>
+
         </div>
       </section>
 
