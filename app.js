@@ -102,14 +102,14 @@ function rollAerodrome() {
   showResult(action, `Aerodrome (1–2) → ${n} = ${action}`, 'images/aerodrome.png');
 }
 
-// Likkit: 1-2 for Treats vs Creations; if Creations → chain to 1-3
-function rollLikkit() {
+// Likit: 1-2 for Treats vs Creations; if Creations → chain to 1-3
+function rollLikit() {
   const first = rollRange(1, 2);
   if (first === 1) {
-    showResult('FIVE TREATS', 'Likkit → 1 = Five Treats (pick what you want)', 'images/likkit.png');
+    showResult('FIVE TREATS', 'Likit → 1 = Five Treats (pick what you want)', 'images/likit.png');
   } else {
     const second = rollRange(1, 3);
-    showResult(`CREATION ${second}`, `Likkit → 2 = Creations → then rolled ${second} of 3`, 'images/likkit.png');
+    showResult(`CREATION ${second}`, `Likit → 2 = Creations → then rolled ${second} of 3`, 'images/likit.png');
   }
 }
 
