@@ -94,14 +94,14 @@ function rollAerodrome() {
   showResult(action, `Aerodrome (1–2) → ${n} = ${action}`);
 }
 
-// Lickit: 1-2 for Treats vs Creations; if Creations → chain to 1-3
-function rollLickit() {
+// Likkit: 1-2 for Treats vs Creations; if Creations → chain to 1-3
+function rollLikkit() {
   const first = rollRange(1, 2);
   if (first === 1) {
-    showResult('FIVE TREATS', 'Lickit → 1 = Five Treats (pick what you want)');
+    showResult('FIVE TREATS', 'Likkit → 1 = Five Treats (pick what you want)');
   } else {
     const second = rollRange(1, 3);
-    showResult(`CREATION ${second}`, `Lickit → 2 = Creations → then rolled ${second} of 3`);
+    showResult(`CREATION ${second}`, `Likkit → 2 = Creations → then rolled ${second} of 3`);
   }
 }
 
