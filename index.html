@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IronZaar Randomizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <span class="site-title">IronZaar Randomizer</span>
+    <label class="kaizo-toggle" title="Enable Kaizo mode rules">
+      <input type="checkbox" id="kaizoToggle" />
+      <span class="toggle-track">
+        <span class="toggle-thumb"></span>
+      </span>
+      <span class="toggle-label">Kaizo Mode</span>
+    </label>
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <div class="layout">
+
+    <!-- LEFT / MAIN COLUMN -->
+    <main>
+
+      <!-- HERO RESULT -->
+      <section class="hero" id="heroSection">
+        <div class="hero-result" id="heroResult">—</div>
+        <div class="hero-label" id="heroLabel">Roll something to get started</div>
+        <div class="hero-time" id="heroTime"></div>
+      </section>
+
+      <!-- STANDARD ROLLS -->
+      <section class="card-section">
+        <h2>Standard Rolls</h2>
+        <div class="card-grid">
+
+          <div class="card">
+            <div class="card-title">Options (1–2)</div>
+            <div class="card-desc">Two-option decisions</div>
+            <button onclick="roll('Options', 1, 2)">Roll 1–2</button>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Options (1–3)</div>
+            <div class="card-desc">Three-option decisions (most common)</div>
+            <button onclick="roll('Options', 1, 3)">Roll 1–3</button>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Options (1–4)</div>
+            <div class="card-desc">Four-option decisions</div>
+            <button onclick="roll('Options', 1, 4)">Roll 1–4</button>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Custom Range</div>
+            <div class="card-desc">Any edge case</div>
+            <div class="custom-range">
+              <input type="number" id="customMin" value="1" min="0" />
+              <span>to</span>
+              <input type="number" id="customMax" value="5" min="1" />
+            </div>
+            <button onclick="rollCustom()">Roll</button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SPECIAL EVENTS -->
+      <section class="card-section">
+        <h2>Special Events</h2>
+        <div class="card-grid">
+
+          <div class="card">
+            <div class="card-title">Aerodrome</div>
+            <div class="card-desc">1 = Reroll node&nbsp;&nbsp;2 = Select location</div>
+            <button onclick="rollAerodrome()">Roll Aerodrome</button>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Lickit</div>
+            <div class="card-desc">Treats vs. Creations, then which creation</div>
+            <button onclick="rollLickit()">Roll Lickit</button>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Gumball Machine</div>
+            <div class="card-desc">How many gumballs to buy (0–10)</div>
+            <button onclick="rollGumball()">Roll Gumball</button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- KAIZO SECTION -->
+      <section class="card-section kaizo-section" id="kaizoSection" style="display:none">
+        <h2>Kaizo Mode <span class="kaizo-badge">KAIZO</span></h2>
+
+        <div class="card-grid">
+
+          <div class="card kaizo-card">
+            <div class="card-title">Pearl's Dig Site</div>
+            <div class="card-desc">Roll 1–5 for number of digs before selecting item</div>
+            <button onclick="roll('Pearl\'s Dig Site – Digs', 1, 5)">Roll 1–5</button>
+          </div>
+
+        </div>
+
+        <h3 class="rule-reminders-title">Passive Rule Reminders</h3>
+        <div class="rule-reminders">
+          <div class="rule-badge">Tumbleweeds: rightmost slot must stay empty during combat</div>
+          <div class="rule-badge">Steady Hand: no moving items on board or stash inside a node or before rolling</div>
+          <div class="rule-badge">Mandala's Malice: if Mandala is rolled, board is frozen until it ends</div>
+          <div class="rule-badge">Highest-Rarity Tax: sell one item of your highest rarity at the start of each day (from day 3)</div>
+          <div class="rule-badge">No Repairs: destroyed items must be sold immediately after combat</div>
+          <div class="rule-badge">Take ONE Please: buy only 1 item per batch shown at a shop</div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- RIGHT SIDEBAR — HISTORY LOG -->
+    <aside class="history-sidebar">
+      <div class="history-header">
+        <span>Roll History</span>
+        <button class="clear-btn" onclick="clearHistory()">Clear</button>
+      </div>
+      <ul class="history-list" id="historyList">
+        <li class="history-empty">No rolls yet</li>
+      </ul>
+    </aside>
+
+  </div><!-- /.layout -->
+
+  <script src="app.js"></script>
+</body>
+</html>
